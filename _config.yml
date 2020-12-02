@@ -28,5 +28,3 @@ github_username: Thrinador
 
 # Build settings
 theme: minima
-plugins:
-  - jekyll-feed
