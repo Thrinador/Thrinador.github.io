@@ -1,3 +1,33 @@
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- seo -%}
+    <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  
+    <script>
+    function wrap_img(fn) {
+      if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+          var elements = document.querySelectorAll(".post img");
+          Array.prototype.forEach.call(elements, function(el, i) {
+              if (el.getAttribute("title")) {
+                  const caption = document.createElement('figcaption');
+                  var node = document.createTextNode(el.getAttribute("title"));
+                  caption.appendChild(node);
+                  const wrapper = document.createElement('figure');
+                  wrapper.className = 'image';
+                  el.parentNode.insertBefore(wrapper, el);
+                  el.parentNode.removeChild(el);
+                  wrapper.appendChild(el);
+                  wrapper.appendChild(caption);
+              }
+          });
+      } else { document.addEventListener('DOMContentLoaded', fn); }
+    }
+    window.onload = wrap_img;
+    </script>
+  
+  </head>
