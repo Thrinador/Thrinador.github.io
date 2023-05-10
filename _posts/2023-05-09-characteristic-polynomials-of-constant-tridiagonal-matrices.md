@@ -18,28 +18,8 @@ be the $$n$$ by $$n$$ tridiagonal matrix of all 1s.
 
 A good place to start is to work with some examples. In this effort, the coefficients for the characteristic polynomials of $$T_n$$ for $$n$$ up to 15 in decreasing order are given below.
 
-::: center
-  $$\multicolumn{1}{l}{$$n$$}$$                                                                                             
-  --------------------------- --- ----- ---- ------ ----- ----- ------ ----- ----- ------ ------ ----- ----- ----- ---- ----
-  $${1-1}                       1                                                                                        
-  0$$                                                                                                                    
-  $$1$$                          1   -1                                                                                   
-  $$2$$                          1   -2    0                                                                              
-  $$3$$                          1   -3    1     1                                                                        
-  $$4$$                          1   -4    3     2     -1                                                                 
-  $$5$$                          1   -5    6     2     -4     0                                                           
-  $$6$$                          1   -6    10    0     -9     2     1                                                     
-  $$7$$                          1   -7    15    -5    -15    9     3     -1                                              
-  $$8$$                          1   -8    21   -14    -20   24     3     -6     0                                        
-  $$9$$                          1   -9    28   -28    -21   49     -6    -18    3     1                                  
-  $$10$$                         1   -10   36   -48    -14   84    -35    -36   18     4      -1                          
-  $$11$$                         1   -11   45   -75     6    126   -98    -50   60     4      -8     0                    
-  $$12$$                         1   -12   55   -110   45    168   -210   -36   145   -20    -30     4     1              
-  $$13$$                         1   -13   66   -154   110   198   -384   48    279   -115   -70    30     5    -1        
-  $$14$$                         1   -14   78   -208   209   198   -627   264   441   -358   -100   120    5    -10   0   
-  $$15$$                         1   -15   91   -273   351   143   -935   693   561   -847   -21    335   -45   -45   5    1
-  $$\multicolumn{1}{l}{}$$       0    1    2     3      4     5     6      7     8     9      10    11    12    13    14   15
-:::
+
+![Characteristic polynomials of Tridiagonal matrices up to order 15.](/images/tridiagonal_table_1.PNG)
 
 This is an interesting pattern. Some immediate takeaways the first term is always 1, the last term oscillates between 1,-1, and 0, and the second term is a negative growing term matching $$n$$.
 
