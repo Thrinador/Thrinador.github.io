@@ -6,13 +6,15 @@ This post is an exploration of the characteristic polynomials of tridiagonal mat
 
 Let 
 
-$$T_n := \begin{bmatrix}
+$$
+T_n := \begin{bmatrix}
 1 & 1 &   &   &  \\
 1 & 1 & 1 &      \\
 & \ddots & \ddots & \ddots \\
 & & 1 & 1 & 1 \\
 & & & 1 & 1
-\end{bmatrix}$$ 
+\end{bmatrix}
+$$ 
 
 be the $$n$$ by $$n$$ tridiagonal matrix of all 1s.
 
