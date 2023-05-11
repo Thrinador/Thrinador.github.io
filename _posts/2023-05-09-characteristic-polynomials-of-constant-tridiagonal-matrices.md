@@ -1,3 +1,5 @@
+[Download a pdf version](/pdfs/characteristic_polynomial_tridiagonal_matrices.pdf)
+
 This post is an exploration of the characteristic polynomials of tridiagonal matrices. In particular what are the coefficients for characteristic polynomial in a fully expanded form. This paper was inspired by Matrix Analysis [[5]](#references) which posed the problem of determining the characteristic polynomial of a 5 by 5 all ones tridiagonal matrix. The followup was how this procedure can be generalized.
 
 # All ones tridiagonal matrices
