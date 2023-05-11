@@ -4,15 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hello my name is Ben Clark. I am a software engineer turned pretend mathematician. I am currently in grad school at Washington State University for a PhD in mathematics. 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+This blog is a place for me to infrequently write about interesting math topics (and maybe other things) that I encounter. 
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+If you find a mistake in any of the posts send me an email at thrinador1@gmail.com and I will give you credits for fixing it.
