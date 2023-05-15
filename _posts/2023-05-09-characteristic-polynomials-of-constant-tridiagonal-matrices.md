@@ -23,7 +23,7 @@ be the $$n$$ by $$n$$ tridiagonal matrix of all 1s.
 A good place to start is to work with some examples. In this effort, the coefficients for the characteristic polynomials of $$T_n$$ for $$n$$ up to 15 in decreasing order are given below.
 
 
-![Characteristic polynomials of Tridiagonal matrices up to order 15.](/images/tridiagonal_table_1.PNG)
+![Characteristic polynomials of Tridiagonal matrices up to order 15.](/images/tridiagonal/tridiagonal_table_1.PNG)
 
 This is an interesting pattern. Some immediate takeaways the first term is always 1, the last term oscillates between 1,-1, and 0, and the second term is a negative growing term matching $$n$$.
 
