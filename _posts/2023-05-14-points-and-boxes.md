@@ -1,3 +1,5 @@
+[Download a pdf version](/pdfs/points_and_boxes.pdf)
+
 # Starting problem
 
 The starting problem is given a line and labeled points on that line we define a **binary string** by taking a line segment that covers some points. Covered points are a one and non-covered points are a zero. For example given points $$\{1,2,3\}$$ on the line if a line segment covers points $$\{1,3\}$$, then it has a binary string $$101$$.
