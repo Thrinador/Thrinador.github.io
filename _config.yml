@@ -4,7 +4,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Math blog
+title: Nonsensically nonnegative
 email: find.ben.clark@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A site for me to infrequently write about random math topics that I encounter.
