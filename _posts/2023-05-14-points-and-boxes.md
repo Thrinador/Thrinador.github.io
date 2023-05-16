@@ -1,6 +1,6 @@
 [Download a pdf version](/pdfs/points_and_boxes.pdf)
 
-# Starting problem
+## Starting problem
 
 The starting problem is given a line and labeled points on that line we define a **binary string** by taking a line segment that covers some points. Covered points are a one and non-covered points are a zero. For example given points $$\{1,2,3\}$$ on the line if a line segment covers points $$\{1,3\}$$, then it has a binary string $$101$$.
 
@@ -17,11 +17,11 @@ We define a **binary set** as the set of all binary strings for a given set of p
 
 **Question 1**. What are the maximum number of points where you can get a binary set?
 
-## Starting problem solution
+### Starting problem solution
 
 The answer is two. We can solve two points directly, but when we move to three points the middle point blocks just the two outer points from being covered by a line segment. That is if we labeled our points from left to right as $$\{1,2,3\}$$, then we can't get the binary string $$101$$.
 
-# Two dimensions
+## Two dimensions
 
 In two dimensions we now place points on a plane and instead of covering with a line segment we cover with a rectangle. For a given covering to work we can change the length and width of the rectangle, but we cannot rotate it. Also, the points can be chosen anywhere on the plane, but must be in the same place for the entire binary set.
 
@@ -32,7 +32,7 @@ In two dimensions we now place points on a plane and instead of covering with a 
 </figure>
 </center>
 
-## Solution in two dimensions
+### Solution in two dimensions
 
 The answer is four. We can solve this by placing the points in a square, then moving one point up a little, one point slightly to the left, one point slightly to the right, and the final point slightly down. You can also think of this as rotating the square by a small (under 45 degree) amount.
 
@@ -46,7 +46,7 @@ shifting the points.</figcaption>
 
 From there we can easily make every covering combination. Below are several ways to show why five points can't be solved.
 
-### Solution 1: Projections
+#### Solution 1: Projections
 
 **Lemma 2**. If two or more points share either the same $$x$$ or $$y$$ component, then a binary set for five points does not exist.
 
@@ -68,7 +68,7 @@ From there we can easily make every covering combination. Below are several ways
 </figure>
 </center>
 
-### Solution 2: Partitioning the plane
+#### Solution 2: Partitioning the plane
 
 Let $$p_1, p_2$$ be points, then define $$R(p_1,p_2)$$ as the rectangle made from $$p_1$$ and $$p_2$$ as corners. This rectangle, $$R(p_1, p_2)$$, will be called the **minimal rectangle of $$p_1$$ and $$p_2$$**.
 
@@ -103,7 +103,7 @@ $$
 
 By Lemma 2 $$y_3 \not = y_4$$, so we have two options. If $$y_4 > y_3$$, then we can't make the pair $$\{p_2, p_4\}$$ without $$p_3$$ being included. If $$y_4 < y_3$$, then we can't make the pair $$\{p_3, p_5\}$$ without $$p_4$$ being included. Thus there exists no binary set to cover five points in two dimensions. ◻
 
-### Solution 3: Perturbations of minimal rectangle containing all points
+#### Solution 3: Perturbations of minimal rectangle containing all points
 
 This solution was given by a fellow grad student, Jared Brannan, who was the person who posed the problem to me.
 
@@ -119,12 +119,12 @@ Define $$R(P)$$ as the minimal rectangle containing all the points, $$P = \{p_1,
 
 *Proof.* Let $$P = \{p_1, p_2, p_3, p_4, p_5\}$$, then by Lemma 7 $$R(P)$$ either has two points sharing an edge or at least one fully interior point. If two points share an edge, then by Lemma 2 we can't get all binary sequences for five points. If we have a fully interior point, then we can't cover just the exterior points. Thus there exists no binary set to cover five points in two dimensions. ◻
 
-# Higher dimensions
+## Higher dimensions
 
 The final question is what is the formula for an $$n$$ dimensional space? The same restrictions apply; points can be placed anywhere but must remain constant for a full binary set, you are covering with $$n$$ dimensional hyperrectangles where any side can be changed in length, but
 they cannot be rotated. 
 
-## Solution in higher dimensions
+### Solution in higher dimensions
 
 The answer for $$n$$ dimensional space is $$2n$$. Solutions 1 and 3 from two dimensions generalize pretty well, but solution 3 is the easiest to give. So I will give a proof outline for solution 1 and a full proof of solution 3.
 
@@ -143,11 +143,11 @@ Now for the full proof using the ideas from solution 3.
 
 *Proof.* Let $$P$$ be the set of $$2n + 1$$ points and construct the minimal hyperrectangle $$R(P)$$ for the points $$P$$. Now we have two cases either two points lie on the same face (that is they share some coordinate) or their is a fully interior point. If there is a fully interior point, then we can't get all binary string containing $$n-1$$ one values. If there are two points sharing the same component, then we can make the same argument as in Lemma 2 to show that we can't get all binary pairs. Thus there exists no binary set to cover $$2n+1$$ points in $$n$$ dimensions. ◻
 
-# Where this problem came from
+## Where this problem came from
 
 This problem was posed as a fun problem with no applications. It came from Jared, who gave solution 3, when looking at [Shattered sets](https://en.wikipedia.org/wiki/Shattered_set).
 
-# Open questions and further generalizations
+## Open questions and further generalizations
 
 1.  For another solution of the 2d case I was hoping to use graph theory to make a planarity argument. That is, compare trying to box 5 points on the plane to the complete $$K_5$$ graph being non-planar. I wasn't able to come up with a nice mapping between the two. So the open question is does there exist a consistent mapping between the $$K_5$$ graph and boxing points such that $$K_5$$ being non-planar proves that we can't box 5 points? This may generalize well using hyper graphs or some genus argument on the space.
 
@@ -155,4 +155,4 @@ This problem was posed as a fun problem with no applications. It came from Jared
 
 3.  How does this problem change if instead of rectangles we allow for different convex shapes? For example if using discs instead of rectangles you can show that four points is not possible in two dimensions.
 
-4.  Finally what can be said if we instead allow for arbitrary sets of functions instead of shapes. For example the set of paths with restrictions on their curvature.
+4.  Finally, what can be said if we instead allow for arbitrary sets of functions instead of shapes. For example the set of paths with restrictions on their curvature.

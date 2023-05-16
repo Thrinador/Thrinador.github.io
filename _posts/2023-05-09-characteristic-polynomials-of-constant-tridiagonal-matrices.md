@@ -2,7 +2,7 @@
 
 This post is an exploration of the characteristic polynomials of tridiagonal matrices. In particular what are the coefficients for characteristic polynomial in a fully expanded form. This paper was inspired by Matrix Analysis [[5]](#references) which posed the problem of determining the characteristic polynomial of a 5 by 5 all ones tridiagonal matrix. The followup was how this procedure can be generalized.
 
-# All ones tridiagonal matrices
+## 1 All ones tridiagonal matrices
 
 Let 
 
@@ -59,7 +59,7 @@ and find that the entries follow pascal's triangle on the diagonals instead of t
 
 In our case the third entry also follows pascal's triangle. However the fourth and onward do not. This is a step towards showing the characteristic polynomials follow a sum of binomial coefficients.
 
-## Chebyshev polynomials
+### 1.1 Chebyshev polynomials
 
 Looking at the OEIS, I found [oeis.org/A049310](https://oeis.org/A049310). This closely matched the coefficients of the factored recurrence relation. From there I found [[7]](#references) where Artisevich, Bychkov, and Shabat look into the relation between Chebyshev polynomials and Catalan numbers. They use this relation on an application to tridiagonal matrices. For a good introduction to Chebyshev polynomials see [[7]](#references).
 
@@ -79,7 +79,7 @@ with initial conditions $$U_0(x) = 1$$ and $$U_1(x) = 2x$$.
 
 This is very similar to the recurrence relation from equation $$(1)$$ and shows why, in the OEIS entry, taking $$U_n(x/2)$$ matches exactly to our factored form. However neither Artisevich's paper or the book on Chebyshev polynomials had a good solution to this recurrence relation.
 
-## Catalan numbers and Generalized Fibonacci polynomials
+### 1.2 Catalan numbers and Generalized Fibonacci polynomials
 
 Another similar looking OEIS entry for the coefficients of the factored terms was, [oeis.org/A115139](https://oeis.org/A115139). This is an interesting connection since it shows that the coefficients in this semi-factored form are related to the Catalan numbers (or at least through the Catalan number's generating function).
 
@@ -126,6 +126,8 @@ $$
 p_{T_n}(\lambda) = \sum_{k=0}^{\left\lfloor n/2 \right\rfloor} { n - k \choose k}  (-1)^{k} (\lambda - 1)^{n-2k}.
 $$
 
+◻
+
 
 **Question 5**. Can the formula above be used to find the exact coefficients of a fully expanded tridiagonal matrix?
 
@@ -150,7 +152,7 @@ $$
 
 Sadly I don't see any way to get this in a more closed form. The binomial coefficients don't seem to combine or simplify in any meaningful way especially with the sign flipping every term.
 
-# Generalization to constant diagonal tridiagonal matrices
+## 2 Generalization to constant diagonal tridiagonal matrices
 
 Lets now turn to tridiagonal matrices who have constant diagonal entries. We can define this as 
 
@@ -197,7 +199,7 @@ $$
 \sum_{k=0}^{\left\lfloor \frac{n-j}{2} \right\rfloor} { n - k \choose k} {n-2k \choose j} (-1)^{n-k-j} (ac)^{k} b^{n-2k}.
 $$
 
-# Concluding remarks
+## 3 Concluding remarks
 
 The coefficients for the characteristic polynomials of $$T_n$$ and $$T_n(a,b,c)$$ have two binomial terms that flip signs. From [[6]](#references) there may be an interesting ways to simplify this using Catalan numbers.
 
@@ -220,7 +222,7 @@ as an arbitrary tridiagonal matrix. The characteristic polynomial, $$p_{T_n(a,b,
 
 $$p_{T_n(a,b,c)}(\lambda) = \sum_{j=0}^{n} \lambda^j \sum_{k=0}^{\left\lfloor \frac{n-j}{2} \right\rfloor} { n - k \choose k} {n-2k \choose j} (-1)^{n-k-j} \left( \prod_{\ell = 1}^k a_\ell c_\ell \right) \left( \prod_{\ell = 1}^{n-2k} b_\ell \right).$$
 
-# References
+## References
 
 1. Artisevich, A. E., B. S. Bychkov, and A. B. Shabat. 2020. “Chebyshev
 Polynomials, Catalan Numbers, and Tridiagonal Matrices.” *Teoret. Mat.
