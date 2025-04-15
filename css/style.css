@@ -1,0 +1,68 @@
+/* Basic Reset / Normalize (Optional but good practice) */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; /* Choose a nice font */
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 900px; /* Limit width for readability */
+    margin: 0 auto; /* Center the content */
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    background: #444;
+    padding: 0.5rem 0;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px; /* Optional rounded corners */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Add more styles for headings, links, images, code blocks etc. */
